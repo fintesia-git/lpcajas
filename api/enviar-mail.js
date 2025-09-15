@@ -1,4 +1,4 @@
-// api/enviar-email.js
+// api/enviar-mail.js
 
 export default async function handler(req, res) {
   // Solo permitir peticiones POST

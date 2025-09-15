@@ -124,7 +124,7 @@ form.addEventListener('submit', async function(e) {
   submitButton.disabled = true;
 
   try {
-    const response = await fetch('/api/enviar-email', {
+    const response = await fetch('/api/enviar-mail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formProps),
