@@ -24,3 +24,16 @@ body {
 .bg-gray-800 {
 	background-color: #424242 !important;
 }
+
+/* Modal styles */
+.modal {
+  transition: opacity 0.25s ease;
+}
+body.modal-active {
+  overflow-x: hidden;
+  overflow-y: hidden; /* Or fixed */
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -34,6 +34,78 @@ document.addEventListener("scroll", function () {
         header.classList.remove("shadow");
     }
 });
+// Modal Logic
+var openmodal = document.querySelectorAll('.modal-open');
+for (var i = 0; i < openmodal.length; i++) {
+  openmodal[i].addEventListener('click', function(event){
+    event.preventDefault();
+    
+    // Get data from the button
+    const title = this.getAttribute('data-title');
+    const description = this.getAttribute('data-description');
+    const image = this.getAttribute('data-image');
+    
+    // Populate the modal
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-description').innerText = description;
+    document.getElementById('modal-image').src = image;
+    document.querySelector('.modal-quote-btn').setAttribute('data-product', title);
+    
+    toggleModal();
+  });
+}
 
-// Se ha eliminado toda la lógica del menú desplegable y del nav-toggle.
-// Esto simplifica el código y evita los problemas que teníamos.
+const overlay = document.querySelector('.modal-overlay');
+overlay.addEventListener('click', toggleModal);
+
+var closemodal = document.querySelectorAll('.modal-close');
+for (var i = 0; i < closemodal.length; i++) {
+  closemodal[i].addEventListener('click', toggleModal);
+}
+
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  var isEscape = false;
+  if ("key" in evt) {
+    isEscape = (evt.key === "Escape" || evt.key === "Esc");
+  } else {
+    isEscape = (evt.keyCode === 27);
+  }
+  if (isEscape && document.body.classList.contains('modal-active')) {
+    toggleModal();
+  }
+};
+
+function toggleModal () {
+  const body = document.querySelector('body');
+  const modal = document.querySelector('.modal');
+  modal.classList.toggle('opacity-0');
+  modal.classList.toggle('pointer-events-none');
+  body.classList.toggle('modal-active');
+}
+
+// Form Logic and Smooth Scroll
+document.querySelectorAll('.quote-btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+        // Prevent default anchor behavior for a moment to run our script
+        e.preventDefault();
+
+        const product = this.getAttribute('data-product');
+        const messageTextarea = document.getElementById('mensaje');
+        
+        if (product && product !== 'Consulta general') {
+            messageTextarea.value = `Hola, quisiera recibir un presupuesto para el producto: ${product}. ¡Gracias!`;
+        } else {
+            // Clear if it's a general inquiry or already filled
+            messageTextarea.value = '';
+        }
+        
+        // Close the modal if it's open
+        if (document.body.classList.contains('modal-active')) {
+            toggleModal();
+        }
+
+        // Now, manually scroll to the form
+        document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+    });
+});
