@@ -1,0 +1,26 @@
+/* index.css */
+/* Paste your CSS code here. This file will be linked from index.html. */
+/* Gradient background for .gradient class - brown and green */
+.gradient {
+	background: linear-gradient(90deg, #2A7B9B 22%, #49BCF5 79%);
+}
+
+body {
+	color: #222;
+}
+
+.bg-white {
+	background-color: #f8f9fa !important;
+}
+
+.text-gray-800 {
+	color: #424242 !important;
+}
+
+.text-gray-700 {
+	color: #49B4DE !important;
+}
+
+.bg-gray-800 {
+	background-color: #424242 !important;
+}

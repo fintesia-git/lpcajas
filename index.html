@@ -1,179 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cajas y Estuches - Soluciones de Empaque Personalizadas</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f8f8; /* Un fondo ligeramente gris */
-        }
-        /* Estilos personalizados para el formulario para un toque más amigable */
-        .form-input {
-            @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200;
-        }
-        .form-button {
-            @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105;
-        }
-    </style>
-</head>
-<body class="text-gray-800">
-
-    <!-- Header Section -->
-    <header class="bg-white shadow-sm py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Logo Placeholder -->
-            <div class="flex items-center">
-                <img src="https://placehold.co/60x60/a0c4ff/ffffff?text=LOGO" alt="Logo de la Empresa" class="h-16 w-16 rounded-full mr-3">
-                <span class="text-3xl font-bold text-blue-700">Tu Marca</span>
-            </div>
-            <!-- Navigation (optional, for future expansion) -->
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-200">Nosotros</a></li>
-                    <li><a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-200">Servicios</a></li>
-                    <li><a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-200">Contacto</a></li>
-                </ul>
-            </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      LP Cajas
+    </title>
+    <meta name="description" content="LP Cajas" />
+    <meta name="keywords" content="Cajas" />
+    <meta name="author" content="Fintesia" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    <nav id="header" class="fixed w-full z-30 top-0">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div class="pl-4 flex items-center">
+          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
+            <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
+              <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#424242" stroke="#424242" stroke-width="20">
+                <path
+                  class="box"
+                  d="M65 4792 c-11 -2 -30 -13 -42 -25 l-23 -20 0 -387 c0 -294 3 -390 13 -402 9 -13 318 -208 630 -398 l27 -17 -276 -178 c-152 -98 -283 -189 -292 -203 -14 -22 -14 -72 1 -605 15 -526 18 -584 34 -604 20 -25 2425 -1617 2458 -1626 15 -5 325 195 1250 806 1171 774 1230 815 1237 848 13 60 40 1133 29 1161 -7 19 -292 196 -1248 775 l-1238 750 -1235 62 c-679 33 -1251 63 -1270 64 -19 2 -44 1 -55 -1z m1470 -231 l1050 -57 1077 -644 c593 -354 1076 -646 1074 -648 -3 -2 -503 9 -1112 23 l-1107 27 -1056 675 c-581 372 -1058 677 -1060 679 -8 7 85 3 1134 -55z m-266 -701 l1083 -694 -140 -138 c-77 -76 -144 -138 -149 -138 -5 0 -434 258 -954 574 l-944 574 -3 267 c-2 215 0 266 10 258 7 -5 501 -322 1097 -703z m-192 -561 c128 -83 233 -154 233 -158 -1 -3 -111 -79 -245 -169 l-245 -163 -244 153 c-135 84 -244 156 -243 160 3 11 481 326 496 327 8 1 119 -67 248 -150z m2753 -229 c459 -11 862 -21 894 -23 l60 -2 -290 -182 -289 -183 -682 0 -682 0 -105 204 c-58 112 -106 207 -106 211 0 4 82 5 183 1 100 -4 558 -15 1017 -26z m-2056 -205 c180 -110 294 -175 311 -175 29 0 67 32 262 224 67 66 124 118 127 115 2 -2 59 -112 127 -244 67 -132 129 -248 137 -257 14 -17 56 -18 606 -18 505 0 588 -2 576 -14 -8 -8 -305 -190 -659 -406 -497 -303 -648 -390 -661 -383 -54 25 -1619 999 -1617 1006 3 11 479 325 495 326 6 1 140 -78 296 -174z m-312 -648 l1068 -662 0 -499 c0 -440 -2 -497 -15 -492 -8 3 -516 339 -1129 746 l-1113 740 -7 198 c-3 108 -9 315 -12 460 l-7 264 74 -46 c41 -26 554 -345 1141 -709z m3496 293 c-5 -250 -13 -458 -17 -461 -3 -3 -511 -342 -1128 -752 l-1123 -746 0 502 0 502 1138 707 c625 388 1138 705 1139 704 1 -1 -3 -206 -9 -456z"
+                />
+              </g>
+            </svg>
+            LP Cajas
+          </a>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="bg-blue-600 text-white py-20 text-center rounded-b-xl shadow-lg">
-        <div class="container mx-auto px-4">
-            <h1 class="text-5xl font-extrabold mb-4 leading-tight">Empaques que Cuentan tu Historia</h1>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">
-                Diseñamos y fabricamos cajas y estuches únicos en cartulina y papel kraft, perfectos para resaltar tus productos y dejar una impresión duradera.
+        <div class="flex items-center justify-end p-2 lg:p-0 z-20">
+          <ul class="list-reset flex-grow flex justify-end items-center lg:space-x-4 mr-4">
+            <li class="mr-3 px-2 py-2">
+              <a class="inline-block text-white lg:text-black no-underline font-bold hover:text-gray-800 hover:text-underline" href="https://wa.me/5491165630811?text=Hola,%20quiero%20más%20información%20sobre%20sus%20productos">
+                <svg class="h-12 w-12 inline-block mr-0 lg:mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 1280 720"
+                  xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(0,720) scale(0.1,-0.1)" stroke="none">
+                  <path d="M6255 6844 c-540 -35 -1107 -229 -1555 -532 -473 -320 -848 -752 -1091 -1256 -133 -276 -216 -536 -273 -856 -43 -240 -52 -602 -22 -880 40 -374 177 -822 362 -1188 l53 -103 -123 -367 c-68 -202 -191 -570 -274 -818 -84 -249 -152 -459 -152 -469 0 -9 13 -22 29 -28 26 -10 29 -14 24 -45 -6 -32 -5 -34 18 -27 41 13 936 298 1314 420 198 63 368 115 378 115 9 0 52 -17 95 -39 366 -184 756 -294 1171 -332 164 -14 498 -7 659 16 954 132 1766 659 2266 1468 163 264 318 632 401 952 79 307 117 688 96 982 -54 781 -356 1473 -881 2017 -509 527 -1157 853 -1895 952 -108 14 -482 26 -600 18z m391 -684 c357 -29 650 -108 959 -259 419 -206 770 -514 1030 -906 200 -301 323 -625 371 -979 23 -168 23 -508 0 -680 -163 -1209 -1161 -2141 -2372 -2217 -427 -26 -824 44 -1212 214 -107 47 -284 143 -339 183 -17 13 -39 24 -49 24 -9 0 -222 -65 -472 -145 -250 -80 -456 -145 -457 -143 -2 2 62 197 141 433 79 237 144 442 144 458 0 16 -18 53 -44 90 -418 599 -554 1426 -351 2127 45 152 82 245 155 390 200 391 505 732 880 982 473 316 1064 472 1616 428z"/>
+                  <path d="M5323 5236 c-23 -7 -56 -23 -75 -34 -51 -32 -199 -190 -245 -262 -147 -229 -180 -534 -92 -832 67 -225 149 -397 299 -629 190 -292 313 -450 510 -653 296 -305 545 -476 927 -635 282 -118 490 -185 607 -197 81 -8 258 20 362 58 144 52 309 168 373 262 64 96 130 313 138 457 l6 95 -31 36 c-22 24 -112 78 -294 176 -432 232 -487 254 -555 218 -17 -8 -81 -73 -141 -143 -178 -207 -215 -243 -245 -243 -38 0 -287 127 -403 205 -135 92 -223 166 -334 281 -132 137 -275 333 -355 486 l-18 36 72 79 c95 101 134 162 172 268 39 108 37 141 -20 290 -51 133 -92 243 -163 434 -58 157 -101 221 -161 240 -57 17 -287 22 -334 7z"/> 
+                </g>
+              </svg>
+                <span class="hidden lg:inline">Whatsapp</span>
+              </a>
+            </li>
+            <li class="mr-3 px-2 py-2">
+              <a class="inline-block text-white lg:text-black no-underline font-bold hover:text-gray-800 hover:text-underline" href="https://www.instagram.com/lpcajasyestuches/">
+                <svg class="h-6 w-6 inline-block mr-0 lg:mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 1280 1280"
+                  xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(0,1280) scale(0.1,-0.1)" stroke="none">
+                  <path xmlns="http://www.w3.org/2000/svg" d="M3035 12789 c-144 -13 -390 -55 -540 -94 -1169 -301 -2089 -1221 -2390 -2390 -40 -157 -81 -397 -95 -560 -6 -78 -10 -1256 -10 -3346 0 -3508 -2 -3362 55 -3675 157 -855 646 -1617 1358 -2118 498 -350 1058 -549 1677 -596 214 -16 6632 -9 6750 8 576 82 1009 238 1444 519 193 125 323 230 509 413 320 312 548 637 722 1033 134 302 211 587 267 977 17 118 24 6536 8 6750 -45 585 -225 1118 -541 1595 -503 760 -1282 1276 -2173 1440 -313 57 -163 55 -3695 54 -1785 -1 -3291 -6 -3346 -10z m6705 -1099 c927 -114 1678 -775 1905 -1675 69 -274 65 -29 65 -3620 0 -2856 -2 -3258 -15 -3362 -50 -379 -194 -738 -423 -1047 -96 -130 -328 -362 -458 -458 -309 -229 -668 -373 -1047 -423 -104 -13 -506 -15 -3362 -15 -3591 0 -3346 -4 -3620 65 -903 228 -1571 990 -1675 1914 -8 68 -10 1065 -8 3386 l3 3290 28 138 c162 811 724 1453 1494 1707 132 43 345 91 463 103 91 10 6571 6 6650 -3z"/>
+                  <path xmlns="http://www.w3.org/2000/svg" d="M9785 10656 c-278 -65 -491 -272 -559 -547 -23 -93 -21 -255 4 -353 110 -432 583 -666 995 -493 111 46 253 160 316 253 175 258 173 598 -6 849 -89 125 -211 215 -362 268 -75 26 -106 30 -208 33 -78 3 -141 -1 -180 -10z"/>
+                  <path xmlns="http://www.w3.org/2000/svg" d="M6195 9574 c-786 -62 -1494 -384 -2039 -930 -504 -503 -813 -1135 -913 -1864 -24 -177 -24 -596 1 -775 71 -521 231 -950 511 -1370 436 -655 1087 -1123 1837 -1320 470 -123 982 -137 1457 -39 612 126 1160 422 1606 869 507 507 815 1133 912 1855 22 167 25 590 5 750 -94 744 -404 1383 -922 1900 -500 499 -1139 811 -1855 905 -114 16 -494 27 -600 19z m400 -975 c428 -36 853 -207 1195 -479 113 -91 299 -283 386 -400 224 -300 361 -628 421 -1005 24 -154 24 -487 0 -644 -152 -971 -897 -1716 -1868 -1868 -153 -24 -499 -24 -647 0 -732 118 -1341 565 -1662 1220 -332 676 -298 1470 91 2114 177 292 460 575 752 752 399 241 869 350 1332 310z"/>
+                </g>
+              </svg>
+                <span class="hidden lg:inline">Instagram</span>
+              </a>
+            </li>
+          </ul>
+          <button
+            id="navAction"
+            class="mx-auto bg-white lg:mx-0 hover:underline text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-90 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            <span class="inline-block lg:inline">Contacto</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="pt-24">
+      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <div class="flex flex-col w-full md:w-full justify-center items-start text-center md:text-left">
+          <p class="uppercase tracking-loose w-full">Paquetes de Cartulina y Kraft</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">
+            Fabricación de cajas y estuches
+          </h1>
+          <p class="leading-normal text-2xl mb-8">
+            Para todo tipo de emprendimientos gastronómicos y comerciales
+          </p>
+          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            Solicitar presupuesto
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative -mt-12 lg:-mt-24">
+      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"
+            ></path>
+            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+          </g>
+          <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path
+              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <section class="bg-white border-b py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Nosotros
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Compromiso
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Utilizamos materiales de primera calidad, para cuidar y preservar tus productos. Siempre en cartulina triplex premium, apta gastronomía. 
             </p>
-            <a href="#contact" class="form-button">¡Pide tu Presupuesto!</a>
-        </div>
-    </section>
-
-    <!-- About Us / Description Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-blue-700 mb-8">¿Quiénes Somos?</h2>
-            <div class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-700">
-                <p class="mb-6">
-                    En <span class="font-semibold">Tu Marca</span>, somos especialistas en la fabricación integral de soluciones de empaque. Nos apasiona transformar ideas en cajas y estuches de cartulina y papel kraft que no solo protegen tus productos, sino que también comunican la esencia de tu marca.
-                </p>
-                <p class="mb-6">
-                    Desde el diseño inicial hasta la producción final, nuestro equipo trabaja con dedicación para asegurar la máxima calidad y un acabado impecable. Entendemos que cada producto es único, por eso ofrecemos soluciones personalizadas que se adaptan a tus necesidades específicas y a tu visión.
-                </p>
-                <p>
-                    Nos enorgullece nuestra atención al detalle, nuestro compromiso con la sostenibilidad y nuestra capacidad para entregar empaques que superan las expectativas. ¡Permítenos ser parte de tu éxito!
-                </p>
+          </div>
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <div class="align-middle">
+              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+                Trayectoria
+              </h3>
+              <p class="text-gray-600 mb-8">
+                Tenemos más de 10 años de experiencia en el rubro y seguimos apostando por el crecimiento de nuestra empresa y de nuestros clientes.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-blue-50">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-blue-700 mb-12">Nuestros Servicios</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://placehold.co/80x80/60a5fa/ffffff?text=📐" alt="Icono de Diseño Personalizado" class="mx-auto mb-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Diseño Personalizado</h3>
-                    <p class="text-gray-700">
-                        Creamos diseños exclusivos que reflejan la identidad de tu marca, desde la estructura hasta los acabados.
-                    </p>
-                </div>
-                <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://placehold.co/80x80/60a5fa/ffffff?text=📦" alt="Icono de Fabricación de Cajas" class="mx-auto mb-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Fabricación de Cajas</h3>
-                    <p class="text-gray-700">
-                        Producción de cajas a medida en diversas formas y tamaños, con materiales de alta calidad.
-                    </p>
-                </div>
-                <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://placehold.co/80x80/60a5fa/ffffff?text=🎁" alt="Icono de Estuches Especiales" class="mx-auto mb-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Estuches Especiales</h3>
-                    <p class="text-gray-700">
-                        Desarrollo de estuches premium para productos que requieren una presentación excepcional.
-                    </p>
-                </div>
-                <!-- Service 4 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://placehold.co/80x80/60a5fa/ffffff?text=♻️" alt="Icono de Papel Kraft" class="mx-auto mb-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Papel Kraft y Sostenibilidad</h3>
-                    <p class="text-gray-700">
-                        Opciones ecológicas en papel kraft para un empaque responsable con el medio ambiente.
-                    </p>
-                </div>
-                <!-- Service 5 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://placehold.co/80x80/60a5fa/ffffff?text=🎨" alt="Icono de Impresión y Acabados" class="mx-auto mb-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Impresión y Acabados</h3>
-                    <p class="text-gray-700">
-                        Impresión de alta calidad y una variedad de acabados para un toque profesional.
-                    </p>
-                </div>
-                <!-- Service 6 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://placehold.co/80x80/60a5fa/ffffff?text=🚀" alt="Icono de Entrega Rápida" class="mx-auto mb-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Entrega Eficiente</h3>
-                    <p class="text-gray-700">
-                        Cumplimos con los plazos de entrega para que tus productos lleguen a tiempo.
-                    </p>
-                </div>
-            </div>
+    <section class="bg-white border-b py-8">
+      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Nuestros productos
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                Nuestro producto estrella
+              </p>  
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Cajas y Estuches en Cartulina Blanca
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                Materiales fines y versátiles con terminaciones finas para todos tus productos.
+              </p>
+            </a>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex items-center justify-start">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Solicitar presupuesto
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                El mejor precio del mercado
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Cajas y Estuches en Kraft
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                Material ecológico y sustentable, para cuidar el medioambiente.
+              </p>
+            </a>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex items-center justify-center">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Solicitar presupuesto
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                Último lanzamiento
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Bandejas en Cartulina y Kraft
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                Firmes y resistentes. Perfectas para tortas.
+              </p>
+            </a>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex items-center justify-end">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Solicitar presupuesto
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+          <g class="wave" fill="#f8fafc">
+            <path
+              d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
+            ></path>
+          </g>
+          <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+            <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+              <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+              <path
+                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                opacity="0.100000001"
+              ></path>
+              <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <section class="container mx-auto text-center py-6 mb-12">
+      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+        Hacenos tu consulta
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <h3 class="my-4 text-3xl leading-tight">
+        Estas a un paso del éxito!
+      </h3>
+      </section>
+    <footer class="bg-white">
+      <div class="container mx-auto px-8">
+        <div class="w-full flex flex-col md:flex-row py-6 items-center">
+          <div class="pl-4 flex items-center mb-4 md:mb-0">
+            <a class="toggleColour text-gray-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+              <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#424242" stroke="#424242" stroke-width="20">
+                  <path
+                    class="box"
+                    d="M65 4792 c-11 -2 -30 -13 -42 -25 l-23 -20 0 -387 c0 -294 3 -390 13 -402 9 -13 318 -208 630 -398 l27 -17 -276 -178 c-152 -98 -283 -189 -292 -203 -14 -22 -14 -72 1 -605 15 -526 18 -584 34 -604 20 -25 2425 -1617 2458 -1626 15 -5 325 195 1250 806 1171 774 1230 815 1237 848 13 60 40 1133 29 1161 -7 19 -292 196 -1248 775 l-1238 750 -1235 62 c-679 33 -1251 63 -1270 64 -19 2 -44 1 -55 -1z m1470 -231 l1050 -57 1077 -644 c593 -354 1076 -646 1074 -648 -3 -2 -503 9 -1112 23 l-1107 27 -1056 675 c-581 372 -1058 677 -1060 679 -8 7 85 3 1134 -55z m-266 -701 l1083 -694 -140 -138 c-77 -76 -144 -138 -149 -138 -5 0 -434 258 -954 574 l-944 574 -3 267 c-2 215 0 266 10 258 7 -5 501 -322 1097 -703z m-192 -561 c128 -83 233 -154 233 -158 -1 -3 -111 -79 -245 -169 l-245 -163 -244 153 c-135 84 -244 156 -243 160 3 11 481 326 496 327 8 1 119 -67 248 -150z m2753 -229 c459 -11 862 -21 894 -23 l60 -2 -290 -182 -289 -183 -682 0 -682 0 -105 204 c-58 112 -106 207 -106 211 0 4 82 5 183 1 100 -4 558 -15 1017 -26z m-2056 -205 c180 -110 294 -175 311 -175 29 0 67 32 262 224 67 66 124 118 127 115 2 -2 59 -112 127 -244 67 -132 129 -248 137 -257 14 -17 56 -18 606 -18 505 0 588 -2 576 -14 -8 -8 -305 -190 -659 -406 -497 -303 -648 -390 -661 -383 -54 25 -1619 999 -1617 1006 3 11 479 325 495 326 6 1 140 -78 296 -174z m-312 -648 l1068 -662 0 -499 c0 -440 -2 -497 -15 -492 -8 3 -516 339 -1129 746 l-1113 740 -7 198 c-3 108 -9 315 -12 460 l-7 264 74 -46 c41 -26 554 -345 1141 -709z m3496 293 c-5 -250 -13 -458 -17 -461 -3 -3 -511 -342 -1128 -752 l-1123 -746 0 502 0 502 1138 707 c625 388 1138 705 1139 704 1 -1 -3 -206 -9 -456z"
+                  />
+                </g>
+              </svg>
+              <span class="ml-2">LP Cajas</span>
+            </a>
+          </div>
 
-    <!-- Contact Form Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-blue-700 mb-8">Contáctanos</h2>
-            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                ¿Tienes un proyecto en mente o necesitas un presupuesto? Completa el formulario y nos pondremos en contacto contigo a la brevedad.
-            </p>
-            <div class="max-w-xl mx-auto bg-blue-50 p-8 rounded-xl shadow-lg">
-                <!--
-                    Para integrar Formspree, reemplazar 'YOUR_FORMSPREE_ENDPOINT' con la URL de tu formulario Formspree.
-                    Ejemplo: <form action="https://formspree.io/f/your_unique_id" method="POST">
-                -->
-                <form action="#" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-left text-gray-700 font-medium mb-2">Nombre Completo</label>
-                        <input type="text" id="name" name="name" class="form-input" placeholder="Tu Nombre" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-left text-gray-700 font-medium mb-2">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="tu.email@ejemplo.com" required>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-left text-gray-700 font-medium mb-2">Tu Mensaje</label>
-                        <textarea id="message" name="message" rows="6" class="form-input" placeholder="Cuéntanos sobre tu proyecto o consulta..." required></textarea>
-                    </div>
-                    <button type="submit" class="form-button">
-                        Enviar Mensaje
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+          <div class="flex-grow text-center text-gray-600 mb-4 md:mb-0">
+            <span>© <span id="currentYear"></span> 2025 LPCajas - Todos los derechos reservados.</span>
+          </div>
 
-    <!-- Footer Section -->
-    <footer class="bg-gray-800 text-white py-8 text-center rounded-t-xl shadow-lg">
-        <div class="container mx-auto px-4">
-            <p class="mb-4">&copy; 2025 Tu Marca. Todos los derechos reservados.</p>
-            <div class="flex justify-center space-x-6">
-                <!-- Social Media Links (Placeholders) -->
-                <a href="#" class="text-gray-400 hover:text-white transition duration-200">Facebook</a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-200">Instagram</a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-200">LinkedIn</a>
-            </div>
+          <div class="text-gray-600 text-right">
+            <span>Desarrollado por </span>
+            <a href="https://fintesia.com" target="_blank" class="text-blue-500 hover:underline">Fintesia</a>
+          </div>
         </div>
+      </div>
     </footer>
+    <script src="index.js"></script>
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
-</body>
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+    </script>
+  </body>
 </html>
